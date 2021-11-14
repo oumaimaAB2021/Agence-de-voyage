@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head >
+<meta charset="Utf-8">
+<title>Login</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" >
+</head>
+<body>        
+<div class = "container">
+<div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header m-2">
+                    <h3>Connectez vous</h3>
+                   <div class="d-flex justify-content-end logo_login">
+                        <span>
+                        <i class="fas fa-users"></i>
+                       <!--  <img th:src="@{/images/logo.png}" alt="" width="60" height="60"> -->
+                        </span>
+                      
+                    </div>
+                    
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/login}" method="post">
+                    <!-- error message -->
+					<div th:if="${param.error}">
+						<div class="alert alert-danger">Email ou mot de passe incorrect.</div>
+					</div>
+				
+					<!-- logout message -->
+					<div th:if="${param.logout}">
+						<div class="alert alert-info"> Merci d'avoir visité notre plateforme</div>
+					</div>
+					
+                        <div class="input-group form-group mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                            </div>
+                            <input type="text" autofocus="autofocus" class="form-control" id ="username" name = "username" placeholder="Entrer l'adresse email">
+
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                            </div>
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                        </div>
+                      
+                       <!--   <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div> -->
+                        <div class="form-group">
+                            <input type="submit" name="login-submit" id="login-submit" value="Log In" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Vous n'avez pas de compte?<a  th:href="@{/registration}">Créez un!</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Mot de passe oublié?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+		
+</body>
+</html>

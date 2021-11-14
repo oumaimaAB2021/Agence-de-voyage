@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');
+
+.form_main {
+    width: 100%;
+   	justify-content:center;
+}
+.form_main h4 {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 60px;
+    color:#005AA7;
+    
+    text-transform: uppercase;
+}
+.heading {
+    border-bottom: 1px solid #0080c0;
+    padding-bottom: 9px;
+    position: relative;
+}
+.heading span {
+    background: #0080c0 none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 75px;
+}   
+.form {
+    border-radius: 7px;
+    padding: 6px;
+}
+.txt[type="text"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+.txt[type="number"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+.txt_3[type="text"] {
+    margin: 10px 0 0;
+    padding: 10px 0 10px 5px;
+    width: 100%;
+}
+.txt2[type="submit"], .txt2[type="button"] {
+    background: #005AA7 none repeat scroll 0 0;
+    border: 1px solid #005AA7;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 35px;
+    margin: 10px 0;
+    padding: 0;
+    
+    width: 30%;
+}
+.txt2:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #5793ef;
+    transition: all 0.5s ease 0s;
+}
+#textOmra{
+	padding:4px;
+	font-family: 'Aref Ruqaa', serif;
+	font-size: 25px;
+	align-items: center;
+	line-height:1.5em;
+	justify-content: center;
+}
+#Réserver{
+	display: none;
+}

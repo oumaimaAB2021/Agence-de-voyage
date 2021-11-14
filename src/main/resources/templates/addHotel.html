@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Ajouter hotêl</title>
+
+<!-- Bootstrap CSS  & FontAwsome-->
+
+<link href="font-awesome/css1/all.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<script type="text/javascript" src="font-awesome/js1/fontawesome.js"></script>
+<script type="text/javascript" src=""></script>
+
+  <link th:href="@{/css/admin.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="AdminHeader:: Header"></div>
+<br><br>	<br>	<br>	<br>
+<div class="container">
+
+<div class="card">
+	<div class="card-header">
+		<p class="h4 mb-2 text-center titreCard">Hôtels disponnibles</p>
+	</div>
+	<div class="card-body">
+		<form class="text-center border border-light p-5" method="post" th:action="@{/addH}" enctype="multipart/form-data">
+
+			<!-- Name -->
+			<input type="text" name="nomHotel" id="nomHotel" class="form-control mb-4"
+				placeholder="Nom de l'hôtel">
+	<!-- Name -->
+			<input type="text" name="type" id="type" class="form-control mb-4"
+				placeholder="Type de l'hôtel">
+			<!-- destin-->
+			<input type="text" name="ville" id="ville" class="form-control mb-4"
+				placeholder="Ville">
+
+			<!-- Price -->
+			<input type="text" name="prixHotel" id="prixHotel" class="form-control mb-4"
+				placeholder="Prix">
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="descriptionHotel" name="descriptionHotel"
+				placeholder="Description">Description 
+                                 </textarea>
+			<div class="custom-file mb-4">
+				<input type="file" name="imageHotel" class="custom-file-input"
+					id="customFile"> 
+					<label class="custom-file-label"
+					for="customFile">Choisir une image</label>
+			</div>
+			
+			<button class="btn btn-info btn-block" type="submit">Valider</button>
+		</form>
+	</div>
+	</div>
+	
+</div>
+<!-- Default form subscription -->
+<!-- Bootstrap JS & jQuery -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>

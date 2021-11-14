@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head >
+<meta charset="Utf-8">
+<title>Header</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div th:fragment="header">
+<   <!--Header Section-->
+    <header id="header">
+        <div class="top">
+            <div class="container p-0">
+                <!--p-0 padding 0-->
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                  <a class="navbar-brand name text-white" href="#">
+                        <img th:src="@{/images/logo.png}" width="50" height="50" class="d-inline-block align-top" alt="logo_SafelyTravel">
+                         Safely Travel
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white text-weight-bold" href="#">Accueil <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-weight-bold" href="/services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-weight-bold text-white"  href="/about">A propos</a>
+                            </li>
+
+                          <!--  <li class="nav-item">
+                                <a class="nav-link  text-weight-bold" href="/login">Indentifiez vous!</a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="btn btn-info border text-white rounded-pill " href="/login">Connectez vous</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <!--Fin du header-->
+</div>
+</body>
+</html>

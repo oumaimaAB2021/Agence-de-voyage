@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+#banner{
+   background-image: linear-gradient(to left,#FFFDE4, #005AA7);
+}
+#banner-about{
+   background-image: linear-gradient(to left,#FFFDE4, #005AA7);
+   height: 80px;
+}
+.space-about{
+	display:flex;
+    justify-content: center;
+    padding-top: 11rem;
+    width: 100%;
+    height: 200px;
+    color: white;
+}
+.space .h6 {
+	 font-family: 'Dancing Script',"Sakkal Majalla";
+	 font-size: 30px;
+}
+.space p {
+	 font-family: 'Nunito';
+	 font-weight: bold;
+	
+}
+
+.space{
+    display:flex;
+    justify-content: center;
+    padding-top: 9rem;
+    width: 100%;
+    height: 560px;
+    color: white;
+}
+.buttons a {
+        margin-right: 0.5rem;
+        padding: 0.4rem 1.6rem;
+    }
+
+.buttons a:hover{
+    background: white !important;
+}
+.buttons a span {
+    color : black !important;
+}
+
+@media (max-width:992px){
+    .space{
+        padding-top:10rem;
+        height: 500px;
+    }
+}

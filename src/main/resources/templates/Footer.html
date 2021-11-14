@@ -1,0 +1,183 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<meta charset="UTF-8">
+      <link rel="stylesheet" th:href="@{/css/Footer.css}"/>
+      <!-- Google fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div th:fragment="Footer">
+        <footer class="bg-dark  text-white pt-5 pb-4">
+
+            <div class="col-md-5 div1 col-lg-7">
+                <div class="text-center text-md-right">
+
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="wa.me\+212669684132" class="btn-floating btn-sm text-white"
+                                style="font-size: 23px;"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                    class="fas fa-envelope-open-text"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 25px;"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                              <i class="fab fa-cc-paypal"></i>
+                              </a>
+                        </li>
+                      
+                    </ul>
+
+                </div>
+                <hr class="mb-12 mlg-12">
+
+            </div>
+
+            <div class="container text-center text-md-left">
+
+                <div class="row text-center text-md-left">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Safely Travel</h5>
+                        <p>Notre agence vous permet <br>de Choisir la destination et les dates de votre prochain voyage. 
+                        Veuillez également indiquer si 
+                        vous souhaitez reserver pour un Hôtel ou Omra ainsi qu'un paiement sécurisé..</p>
+                            <img th:src="@{/images/qr-code.png}" width=160 height=160 alt="Qr_Code">
+
+                    </div>
+
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase  mb-4 font-weight-bold text-primary">Contact</h5>
+                        <p>
+                            <i class="fas fa-map-marker-alt mr-3"></i> Maroc, Casablanca
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i>touristique2021@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i>+212 669684132
+                        </p>
+                        <p>
+                            <i class="fab fa-whatsapp mr-3"></i> +212 614067367
+                        </p>
+                    </div>
+                    <!-- Contactez nous! -->
+                    <div class="col-md-6 col-lg-4 col-xl-4 mx-auto mt-4">
+
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contactez nous!</h5>
+
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-md-9 mb-md-0 mb-5">
+
+                                 <form method="post" th:action="@{/addM}">
+
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <label for="contact-name" class="">Votre Nom :</label>
+                                                <input type="text" name="nom" id="contact-name" class="form-control"
+                                                    placeholder="Votre Nom">
+
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid row -->
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <label for="contact-email" class="">Adresse email</label>
+                                                <input type="text"  name="email" id="contact-email" class="form-control"
+                                                    placeholder="Adresse email">
+
+                                            </div>
+                                        </div>
+                                        <!-- Grid row -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <label for="contact-Subject" class="">Objet</label>
+                                                <input type="text" name="objet" id="contact-Subject" class="form-control"
+                                                    placeholder="Objet">
+
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                    <!-- Grid row -->
+                                    <div class="row">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-12">
+                                            <div class="md-form">
+                                                <label for="contact-message">Votre message:</label>
+                                                <textarea type="text" name="message" id="contact-message"
+                                                    class="form-control md-textarea" rows="3"
+                                                    placeholder="Votre message"></textarea>
+
+                                            </div>
+                                        </div>
+                                        <!-- Grid column -->
+
+                                    </div>
+                                    <!-- Grid row -->
+
+                                
+                                <br>
+                                <div class="text-center text-md-center">
+                                    <button type="submit" class="btn btn-primary btn-md" onclick=" return alert('Merci pour présenter votre avis, vos remarques seront prises en considération')" >Envoyer</button>
+                                </div>
+						</form>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+
+                    </section>
+                    <!--Section: contact-->
+
+                </div>
+
+            </div>
+
+
+
+
+        </footer>
+    </div>
+</body>
+
+
+</html>

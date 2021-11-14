@@ -1,0 +1,30 @@
+.text-primary{
+    
+    color:   #7ea4f7 !important;
+    /*text-decoration: underline;*/
+}
+.div1{
+	margin-top: 0px;;
+}
+.bg-dark {
+    background-color:  #101c35 !important;
+    padding-top: 3.5px !important;
+}
+hr{
+    background-color:  #1f3158 !important;
+    width:100%;
+}
+.text-primary:hover{
+    
+    color:   white !important;
+    text-decoration: underline;
+}
+
+.text-uppercase{
+	font-family: 'Libre Baskerville', serif;
+	font-family: 'Lobster', cursive;
+}
+
+.list-inline-item{
+	font-size: 30px;
+}

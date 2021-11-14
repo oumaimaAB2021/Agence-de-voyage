@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<title>Services</title>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+	rel="stylesheet">
+
+<!-- styles -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<!-- Footer css -->
+<link rel="stylesheet" th:href="@{/css/Footer.css}" />
+  <link rel="stylesheet" th:href="@{/css/Header2.css}" />
+
+<link rel="stylesheet" th:href="@{/css/ServicesCss/Carousel.css}" />
+
+<link rel="stylesheet" th:href="@{/css/ServicesCss/Forms.css}" />
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+	rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+	<!-- Insérer cette balise "link" après celle de Bootstrap -->
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+
+<body>
+	<div th:replace="Header2:: Header"></div>
+	<!-- Slider -->
+	<section>
+		<div id="myCarousel" class="carousel slide carousel-fade"
+			data-bs-ride="carousel">
+
+			<div class="carousel-inner">
+				<div class="carousel-item active " data-intervalle="1000">
+					<img th:src="@{/images/Slider/nature2.jpg}"
+						class="overlay-image d-block w-100" alt="" />
+				</div>
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/nature.jpg}"
+						class="overlay-image d-block w-100" alt="">
+				</div>
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/avion.jpg}"
+						class="overlay-image d-block w-100" alt="">
+				</div>
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/voyage.jpg}"
+						class="overlay-image d-block w-100" alt="">
+				</div>
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/voyage3.jpg}"
+						class="overlay-image d-block w-100" alt="">
+
+				</div>
+				<!-- 	<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/voyage2.jpg}"
+						class="overlay-image d-block w-100" alt="">
+
+				</div>  -->
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/nature3.jpg}"
+						class="overlay-image d-block w-100" alt="">
+				</div>
+				<div class="carousel-item" data-intervalle="1000">
+					<img th:src="@{/images/Slider/avion.jpg}"
+						class="overlay-image d-block w-100" alt="">
+				</div>
+
+			</div>
+
+			<a class="carousel-control-prev" href="#myCarousel" role="button"
+				data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+				aria-hidden="true"></span> <span class="sr-only">Previous</span>
+			</a> <a class="carousel-control-next" href="#myCarousel" role="button"
+				data-bs-slide="next"> <span class="carousel-control-next-icon"
+				aria-hidden="true"></span> <span class="sr-only">Next</span>
+			</a>
+		</div>
+	</section>
+
+	<section>
+		<div class="containerNavTabs">
+			<div class="row">
+				<div class="col-xs-12 ">
+					<nav>
+						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+							<a class="nav-item nav-link active" id="nav-vols-tab"
+								data-toggle="tab" href="#nav-home" role="tab"
+								aria-controls="nav-home" aria-selected="true"><span>
+									<i class="fas fa-plane"></i>
+							</span>Billets</a> <a class="nav-item nav-link" id="nav-hotel-tab"
+								data-toggle="tab" href="#nav-profile" role="tab"
+								aria-controls="nav-profile" aria-selected="false"> <span><i
+									class="fas fa-hotel"></i></span> Hôtels
+							</a> <a class="nav-item nav-link" id="nav-VoyageOrganisé-tab"
+								data-toggle="tab" href="#nav-contact" role="tab"
+								aria-controls="nav-contact" aria-selected="false"><span><i
+									class="fas fa-route"></i></span>Voyages organisés</a> <a
+								class="nav-item nav-link" id="nav-Omra-tab" data-toggle="tab"
+								href="#nav-omra" role="tab" aria-controls="nav-omra"
+								aria-selected="false">Omra</a>
+						</div>
+					</nav>
+					<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-home"
+							role="tabpanel" aria-labelledby="nav-vols-tab">
+							<!-- Recherche vols -->
+							<section class="search-sec">
+								<div class="containerSearch">
+									<form th:action="@{/services}" method="get">
+										<div class="row m-4 ">
+											<div class="col-lg-3 col-md-3 col-sm-12 p-2 ml-4">
+												<input type="text" class="form-control search-slt"
+													placeholder="Ville de départ" name="depart">
+											</div>
+
+											<div class="col-lg-3 col-md-3 col-sm-12 p-2">
+
+												<select class="form-control search-slt"
+													id="exampleFormControlSelect1" th:value="${ListeVille}"
+													name="ListeVille" placeholder="Ville de destination">
+													<option value="">--Veuillez choisir une
+														destination--</option>
+													<option th:each="p:${Villes}" th:value="${p}"
+														th:text="${p}"></option>
+												</select>
+
+
+											</div>
+
+											<div class="col-lg-3 col-md-3 col-sm-12 p-2">
+												<select class="form-control search-slt"
+													id="exampleFormControlSelect2" th:value="${compagnie}"
+													name="compagnie" placeholder="Compagnie aérienne">
+													<option value="">--Veuillez choisir une
+														compagnie--</option>
+													<option th:each="c:${Compagnies}" th:value="${c}"
+														th:text="${c}"></option>
+												</select>
+												<!--  	<input type="text" class="form-control search-slt"
+															placeholder="Compagnie aérienne" name="compagnie">-->
+											</div>
+											<div class="col-lg-2 col-md-3 col-sm-12 p-2">
+												<button type="submit" class="btn btn-info wrn-btn">Rechercher</button>
+											</div>
+										</div>
+
+									</form>
+								</div>
+							</section>
+							<!-- Fin section recherche vol -->
+							<!-- Affichage des vols disponnibles -->
+							<section>
+								<div class="row m-4 ">
+									<div class="table-responsive-lg">
+										<table class="table table-striped table-condensed table-dark">
+											<thead>
+												<th>Ville départ</th>
+												<th>Ville destination</th>
+												<th>Date départ</th>
+												<th>Heure de départ</th>
+												<th>Date arrivée</th>
+												<th>Heure d'arrivée</th>
+												<th>Compagnie</th>
+												<th>Prix</th>
+												<th></th>
+											</thead>
+											<tbody th:each="b:${Billets}">
+												<td th:text="${b.villeDepart}"></td>
+												<td th:text="${b.villeArrive}"></td>
+												<td th:text="${b.dateDepart}"></td>
+												<td th:text="${b.HeureDepart}"></td>
+												<td th:text="${b.dateArrivee}"></td>
+												<td th:text="${b.HeureArrivee}"></td>
+												<td th:text="${b.compagnie}"></td>
+												<td th:text="${b.prix}"></td>
+												<td><a class="btn btn-info text-white" 
+													th:href="@{/Offre(numOffre=${b.numOffre})}">Réserver</a></td>
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+							</section>
+							<!-- Fin affichage des vols disponnibles -->
+							<!-- Billet formulaire -->
+							<div class="row m-4">
+							
+							<div class="col-md-5">
+							<div class="form form_main ">
+							<h4 class="heading">
+							
+											<strong> Valider </strong> votre choix <span></span>
+							</h4>
+							<table class="table table-dark table-striped" data-toggle="table">
+									<tr>
+									<th scope="row">Départ</th>
+									<td> 
+									<span th:if="${offreChoisi == null}"> </span>
+   									<span th:unless="${offreChoisi == null}">[[*{offreChoisi.VilleDepart}]]</span>
+											
+									</td>
+									</tr>
+									<tr>
+									<th scope="row">Destination</th>
+									<td> 
+									<span th:if="${offreChoisi == null}"> </span>
+   									<span th:unless="${offreChoisi == null}">[[*{offreChoisi.VilleArrive}]]</span>
+											
+									</td>
+									</tr>
+									<tr>
+									<th scope="row">Prix</th>
+									<td> 
+									<span th:if="${offreChoisi == null}"> </span>
+   									<span th:unless="${offreChoisi == null}">[[*{offreChoisi.Prix}]]</span>
+											
+									</td>
+									</tr>
+									<tr>
+									<th scope="row">Date de départ</th>
+									<td> 
+									<span th:if="${offreChoisi == null}"> </span>
+   									<span th:unless="${offreChoisi == null}">[[*{dateDepart}]]</span>
+											
+									</td>
+									</tr>
+										<tr>
+									<th scope="row">Date d'arrivée</th>
+									<td> 
+									<span th:if="${offreChoisi == null}"> </span>
+   									<span th:unless="${offreChoisi == null}">[[*{dateArrivee}]]</span>
+											
+									</td>
+									</tr>
+								</table>
+							
+							</div>
+							</div>
+								<!-- Formulaire -->
+
+		 			<!--  	<div class="col-md-5">
+									<div class="form form_main ">
+
+										<h4 class="heading">
+											<strong> Valider </strong> votre choix <span></span>
+										</h4>
+										<form>
+											<label>Départ</label> <input type="text" 
+												placeholder="Départ" th:value="${offreChoisi.VilleDepart}"
+												disabled="disabled" name="depart" class="txt"> <label>Destination</label>
+											<input type="text"  placeholder="Destination"
+												th:value="${offreChoisi.VilleArrive}" name=""
+												disabled="disabled" class="txt"> <label>Prix</label>
+											<input type="text"  placeholder="Prix"
+												disabled="disabled" th:value="${offreChoisi.Prix}"
+												name="prix" class="txt"> <label>Date de
+												départ</label> <input type="text"
+												placeholder="Date de départ" disabled="disabled"
+												th:value="${dateDepart}" name="dateD" class="txt"> <label>Date
+												d'arrivée</label> <input type="text" 
+												placeholder="Date d'arrivée" disabled="disabled"
+												th:value="${dateArrivee}" name="dateA" class="txt">
+												<input type="button" value="valider" name="valider"
+													class="txt2" >
+										</form>
+									</div>
+
+								</div>	-->
+								<!-- End Formulaire -->
+								<!--<div class="col-md-6" style="margin-top: 140px;">
+						  <h1>Comparez et réservez vos billets d'avion vers toutes
+										les destinations!</h1>--> 
+								<div class="col-md-5 p-2 pl-4">
+									<div class="form_main " id="Réserver">
+
+										<h4 class="heading">
+											<strong> Réservez </strong> votre billet <span></span>
+										</h4>
+										<div class="form">
+											<form th:action="@{/services}" method="post" id="contactFrm"
+												name="contactFrm" th:object="${reservation}">
+												
+												<label>Nombre d'adulte</label> <input type="number" required
+													placeholder="Nombre enfant" value="" name="nbr_enfant"
+													class="txt" min=0 th:field="*{nbrEnfant}"> <label>Nombre
+													d'enfant</label> <input type="number" required
+													placeholder="Nombre adulte" value="" name="nbr_adulte"
+													class="txt" min=0 th:field="*{nbrAdulte}">
+
+												<!--  <input type="number"
+													required placeholder="Nombre de jour" value=""
+													name="nbr_jour" class="txt" min=1 th:field="*{nbrJour}">
+													-->
+												<input type="submit" value="submit" name="submit"
+													class="txt2">
+											</form>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Fin Billet formulaire -->
+						</div>
+						<!-- nav -->
+						<div class="tab-pane fade" id="nav-profile" role="tabpanel"
+							aria-labelledby="nav-hotel-tab">s
+						<!-- Card items -->
+							<br> <br>
+							<div class="row m-3"  >
+								<div class="col-md-3 px-1" th:each="h:${Hotels}">
+									<div class="card" style="width: 18rem;height: 23rem;">
+										<img th:src="*{'data:image/jpeg;base64,'+{h.imageHotel}}"
+											class="card-img-top" alt="...">
+										<div class="card-body">
+											<h5 class="card-title" th:text="${h.nomHotel}"></h5>
+											<p class="card-text" th:text="${h.descriptionHotel}"></p>
+											<a th:href="@{/détailHotel(numOffre=${h.numOffre})}" class="btn btn-info">Voir détails</a>
+
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						
+							<!--end Card items -->
+						</div>
+						<!-- fin nav -->
+						<div class="tab-pane fade" id="nav-contact" role="tabpanel"
+							aria-labelledby="nav-VoyageOrganisé-tab">
+							<!-- Card items -->
+							<br> <br>
+							
+					   
+			
+							<div class="row m-3"  >
+								<div class="col-md-3 px-1" th:each="v:${VoyagesOrganise}">
+									<div class="card" style="width: 18rem; height: 23rem;">
+										<img th:src="*{'data:image/jpeg;base64,'+{v.imageVoyage}}"
+											class="card-img-top" alt="...">
+										<div class="card-body">
+											<h5 class="card-title" th:text="${v.titreVoyage}"></h5>
+											<p class="card-text" th:text="${v.descriptionVoyage}"></p>
+											<a th:href="@{/détailVoyage(numOffre=${v.numOffre})}" class="btn btn-info">Voir détails</a>
+
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						
+							<!--end Card items -->
+					
+						</div>
+						<!-- nav -->
+						
+						<div class="tab-pane fade" id="nav-omra" role="tabpanel"
+							aria-labelledby="nav-Omra-tab">
+								<!-- Affichage des omras disponnibles -->
+							
+							
+
+							<section class="container">
+								<div class="row m-4 ">
+								
+	<!-- <table class="table table-dark" data-toggle="table" data-search="true" data-show-columns="true" data-pagination="true">
+			 -->						<div class="col-12">
+										<table class="table table-dark"  >
+											<thead>
+												<th>Ville destination</th>
+												<th>Date départ</th>
+												<th>Date arrivée</th>
+												<th data-sortable="true" data-field="Prix" >Prix</th>
+												<th></th>
+											</thead>
+											<tbody th:each="o:${Omras}">
+												<td th:text="${o.villeArrive}" ></td>
+												<td th:text="${o.dateDebut}" ></td>
+												<td th:text="${o.dateExpedition}" ></td>
+												<td th:text="${o.prix}" ></td>
+												<td ><a class="btn btn-info text-white" 
+												
+										th:href="@{Offre/Omra(numOffre=${o.numOffre})}" >Réserver</a></td>
+												 
+											</tbody>
+										</table>
+									</div>
+
+								</div>
+							</section>
+							<!-- Fin affichage des omras disponnibles -->
+							<div class="row ">
+								<!-- Formulaire -->
+								<div class="col-5 m-4 p-4">
+									<div class="form_main ">
+										<h4 class="heading">
+											<strong> Omra </strong> Mubaraka <span></span>
+										</h4>
+										<div class="form ">
+											<form th:action="@{/services/omra}" method="post" id="contactFrm"
+												name="contactFrm" th:object="${omra}">
+
+												<input type="text" required placeholder="Ville de départ"
+													value="" name="departO" class="txt" th:field="*{villeOmra}"> <input
+													type="text" required placeholder="Nombre d'adulte"
+													value="" name="nbrAO" class="txt" th:field="*{nbrAdulte}"> <input type="text"
+													required placeholder="Nombre d'enfant (-16ans)" value=""
+													name="nbrEO" class="txt" th:field="*{nbrEnfant}">
+													 <select
+													class="form-control txt" id="exampleFormControlSelect1"
+													name="chambreO" value="Chambre" th:field="*{ChambreOmra}" >
+														<option value="">--Veuillez spécifier le type de chambre--</option>
+														<option value="Chambre double">Chambre double</option>
+														<option value="Chambre triple">Chambre triple</option>
+														<option value="Chambre quadruple">Chambre quadruple</option>
+												</select>
+											
+												<input type="submit" value="Valider" name="submit"
+													class="txt2">
+											</form>
+										</div>
+									</div>
+								</div>
+								<!-- End Formulaire -->
+								<div class="col-md-6" style="margin-top: 140px;">
+									<div class="card flex-md-row mb-4 shadow-sm h-md-250">
+										<div class="card-body d-flex flex-column align-items-start">
+											<strong class="d-inline-block mb-2 text-primary textOmra">
+												Omra Mubaraka </strong>
+
+											<div class="mb-1 text-muted small">Nov 12</div>
+											<p class="card-text mb-auto" id="textOmra">وَأَتِمُّوا
+												الْحَجَّ وَالْعُمْرَةَ لِلَّهِ فَإِنْ أُحْصِرْتُمْ فَمَا
+												اسْتَيْسَرَ مِنَ الْهَدْيِ وَلَا تَحْلِقُوا رُءُوسَكُمْ
+												حَتَّى يَبْلُغَ الْهَدْيُ مَحِلَّهُ</p>
+											<a class="btn btn-outline-primary btn-sm" role="button"
+												href="#">Continue reading</a>
+										</div>
+										<img class="card-img-right flex-auto d-none d-lg-block"
+											alt="Thumbnail [200x250]"
+											th:src="@{/images/voyages/Omra.png}"
+											style="width: 320px; height: 300px;">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- fin nav -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Fin Slider -->
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<br>
+	<br>
+	<br>
+
+	<br>
+	<br>
+
+	<br>
+
+
+	<div th:replace="Footer:: Footer"></div>
+	<!-- Optional JavaScript; choose one of the two! -->
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<!--JavaScript-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+		
+<!-- Insérer cette balise "script" après celle de Bootstrap -->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<!-- langue -->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/locale/bootstrap-table-fr-FR.min.js"></script>
+	<!-- <script type="text/javascript">
+	var a;
+	function AfficherMasquer(){
+		if(a==1){
+	document.getElementById("Réserver").style.display="none";
+		return a=0;
+	}
+	else
+		{
+		
+		document.getElementById("Réserver").style.display="inline";
+		return a=1;
+		}
+	}
+	</script> -->
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Statistiques</title>
+<meta charset="UTF-8" />
+<!-- Bootstrap CSS  & FontAwsome-->
+
+<link href="font-awesome/css1/all.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<script type="text/javascript" src="font-awesome/js1/fontawesome.js"></script>
+<script type="text/javascript" src=""></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+  <link th:href="@{/css/admin.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="AdminHeader:: Header"></div>
+<br><br>	<br>	<br>	<br>
+<body>
+	<div class="container">
+		<h2 align="center " class="titreAdmin pb-4">Statistiques des services de l'agence</h2>
+
+		<div id="container"
+			style="width: 650px; height: 600px; margin: 0 auto"></div>
+	</div>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script th:inline="javascript">
+    $(function(){
+    Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Evolution de nos différents services'  
+        },
+        subtitle: {
+            text: 'Safely Travel'
+        },
+        xAxis: {
+            categories: [[${surveymap.keySet()}]],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            max:100,
+            title: {
+                text: 'Pourcentages des reservations [in %]'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Offres',
+            data: [[ ${surveymap.values()}]]
+        }]
+    });
+    });
+</script>
+
+</body>
+</html>

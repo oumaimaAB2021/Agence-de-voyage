@@ -1,0 +1,74 @@
+#voyages{
+    padding: 3rem 0;
+}
+.left-border{
+    border-left: 8px solid #005AA7;
+    padding-left: 1rem;
+}
+#voyages .owl-carousel .item .item-title a{
+    text-decoration: none;
+    color:black;
+}
+#voyages .owl-carousel .item .item-title .d-flex img{ 
+    width: 30px;
+    margin-right: .5em;
+}
+#voyages .owl-carousel .item .item-title .d-flex a,span{
+    padding: .2rem;
+    text-decoration: none;
+    font-size:.9rem;
+}
+.img-hover{
+    overflow: hidden;
+
+}
+.img-hover img{
+    transform: scale(1);
+    transition: transform .5s ease;
+	height:270px;
+}
+.img-hover img:hover{
+    transform: scale(1.1);
+}
+
+.owl-carousel .owl-nav{
+    margin-top: 2rem
+}
+.owl-carousel .owl-nav button:focus :hover{
+    outline:none;
+    box-shadow: none;
+    background-color:transparen;
+}
+.owl-carousel .owl-nav button span{
+    background-color: transparent;
+    padding:.4rem 3rem;
+    border-radius:3rem;
+}
+.owl-carousel .owl-nav button span :hover{
+    background-color: black;
+   
+}
+.left-border-hotel{
+    border-left: 8px solid #0c6e66;
+    padding-left: 1rem;
+
+    
+}
+
+#Hotels .owl-carousel .item .item-title a{
+    text-decoration: none;
+    color:black;
+}
+#Hotels .owl-carousel .item .item-title .d-flex img{ 
+    width: 30px;
+    margin-right: .5em;
+}
+#Hotels  .owl-carousel .item .item-title .d-flex a,i,span{
+    padding: .2rem;
+    text-decoration: none;
+    font-size:.9rem;
+}
+
+#Hotels{
+	padding-bottom: 3rem;
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<title>Home </title>
+
+	    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    
+    <!-- styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <!-- Footer css -->
+        <link rel="stylesheet" th:href="@{/css/Footer.css}"/>
+        <link rel="stylesheet" th:href="@{/css/banner.css}"/>
+        <link rel="stylesheet" th:href="@{/css/Header.css}"/>
+         <link rel="stylesheet" th:href="@{/css/Carossel.css}"/>
+        <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <!--Owl carrosel-->
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}"/>
+        
+</head>
+<body>
+	<div th:replace="Header:: Header"></div> 
+	
+<!--Main section-->
+    <main id="site-main">
+        <Section id="banner">
+            <div class="row m-0">
+                <div class="col-lg-7">
+                    <div class="space">
+                        <div class="text-lg-left text-center">
+                            <h6 class="h6">Safely Travel</h6>
+                            <h1 class="h1 font-nun font-size-3">
+                                Bienvenue dans notre agence<br>
+                                Travel Safe
+                            </h1>
+                            <p class="width-lg-50">
+                                Inscrivez vous pour découvrir nos offres intérressants
+                            </p>
+                            <div class="buttons">
+                                <a href="/registration" class="btn border text-white rounded-pill my-2">
+                                    <span>
+                                        <i class="fab fa-route"></i> Inscrivez vous!
+                                    </span>
+                                </a> 
+                                <a href="/login" class="btn border text-white rounded-pill my-2 bg-info">
+                                    <span>
+                                        Connectez vous
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+        <!--Carossel section -->
+        <Section id="voyages">
+            <div class="container">
+                <div class="title d-flex justify-content-between">
+                    <h3 class="font-nun text-dark left-border">
+                        Nos voyages
+                    </h3>
+
+                    <h6>
+                        <a href="#" class="nav-link text-secondary">
+                            Images <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <!--Owl carossel-->
+                <div class="owl-carousel owl-theme py-4">
+                <!-- Image 1 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/paris.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Vivez l'expérience et explorez le monde autrement</h5>
+                            </a>
+                            <p class="test-secondary">
+                              Embarquez pour une totale immersion culturelle dans les plus belles destinations du monde !
+
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/person.jpg}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Safely, Travel.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <!-- Image 2 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/essaouira.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Passer de bons moments dans la découverte de votre pays  </h5>
+                            </a>
+                            <p class="test-secondary">
+                              Découvrir le Maroc avec avec des meilleurs conditions et avec une bonne équipe!
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/person.jpg}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Image 3 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/piscine.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">changer d’atmosphère en un clin d’œil.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Destination incontournable pour vous faire changer d’atmosphère en un clin d’œil.
+
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/person.jpg}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Image 4 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/meque.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Garantir la meilleure Omra possible avec un petit budget.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Accompagnement et aide des pèlerins dans l’organisation de leur Omra et de leur séjour<!--  à Makkah et à El Madina. -->
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/person.jpg}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Omra Mubaraka.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Image 5-->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/avion.png}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun"> Large choix de destination</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Nous vous offrons un large choix de destinations proposant découverte et dépaysement.
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/avion.png}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Image 6 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/voyages/view.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Vivez l'expérience et explorez le monde autrement</h5>
+                            </a>
+                            <p class="test-secondary">
+                               Embarquez pour une totale immersion culturelle dans les plus belles destinations du monde !
+                            </p>
+                            <div class="d-flex">
+                                <img th:src="@{/images/voyages/view.jpg}" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--Fin OWl carossel-->
+        </Section>
+        <!--Fin Carossel section-->
+        <!--Carossel  section hotêls -->
+        <Section id="Hotels">
+            <div class="container">
+                <div class="title d-flex justify-content-between">
+                    <h3 class="font-nun text-dark left-border-hotel">
+                        Votre confort
+                    </h3>
+
+                    <h6>
+                        <a href="#" class="nav-link text-secondary">
+                            Images <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <!--Owl carossel-->
+                <div class="owl-carousel owl-theme py-4">
+                <!-- Hotel1 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel10.jpeg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Lorem ipsum dolor sit amet consectetur.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel 2 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel17.jpg}"  class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Safely Travel Hôtel</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Doté d’une piscine extérieure et d’une piscine sensorielle intérieure chauffée, 
+                                une connexion Wi-Fi est disponible gratuitement.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel3 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/chambre2.jpg}"  class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Avantages de confort assurés</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Toutes les chambres comprennent une télévision par satellite à écran plat. Certains logements disposent en outre d'un coin salon.
+								 
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel4 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel4.jpg}"  class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Beauté traditionnelle</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Vous pourrez déguster une tasse de thé ou de café sur votre balcon ou votre terrasse. Toutes les chambres sont pourvues d’une salle de bains
+                                 privative.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel 5 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel5.jpg}"  class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Lorem ipsum dolor sit amet consectetur.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Hotel 6 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel6.jpg}"srctel="Hos/hotel5.jpg" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Lorem ipsum dolor sit amet consectetur.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel 7 -->
+                    <div class="item">
+                        <div class="img-hover"><a href="#">
+                                <img th:src="@{/images/Hotels/hotel7.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Lorem ipsum dolor sit amet consectetur.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hotel 8 -->
+                    <div class="item">
+                        <div class="img-hover"><a th:href="@{/images/Hotels/hotel8.jpg}">
+                                <img th:src="@{/images/Hotels/hotel8.jpg}" class="img-fluid py-3" alt="">
+                            </a>
+                        </div>
+                        <div class="item-title">
+                            <a href="#">
+                                <h5 class="py-2 font-nun">Lorem ipsum dolor sit amet consectetur.</h5>
+                            </a>
+                            <p class="test-secondary">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="d-flex">
+                                <img src="" class="rounded-pill" alt="">
+                                <a href="#" class="text-dark">Lorem, ipsum.</a>
+                                <span class="text-info"> <i class="fas fa-tree"></i>
+                                </span>
+                                <span class="text-secondary"> 1 Minit ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Fin OWl carossel-->
+        </Section>
+        <!--Fin Carossel section-->
+    </main>
+<!--fin main section-->
+     <!--JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--owl carrosel js-->
+    <script th:src="@{/js/jquery.min.js}"></script>
+ 	<script th:src="@{/js/owl.carousel.min.js}"></script>
+  	 <script th:src="@{/js/owl.carousel.js}"></script>
+    <script type="text/JavaScript">
+        //jqueryMethod
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            margin: 40,
+            dots: false,
+            nav:true,
+            navText:
+            ["<span><i class='fas fa-arrow-left' ></i> Pré</span>","<span>Suiv <i class='fas fa-arrow-right'></i></span>"],
+            responsive:{
+            0:{
+            	items:1
+            },
+            600:{
+            	items:2
+            },
+            1000:{
+            	items:3
+            	}
+        
+            }
+        }
+        );
+    });
+    </script>
+<div th:replace="Footer:: Footer"></div> 
+</body>
+</html>

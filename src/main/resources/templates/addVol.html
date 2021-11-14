@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Ajouter voyage</title>
+
+<!-- Bootstrap CSS  & FontAwsome-->
+
+<link href="font-awesome/css1/all.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<script type="text/javascript" src="font-awesome/js1/fontawesome.js"></script>
+<script type="text/javascript" src=""></script>
+
+
+
+  <link th:href="@{/css/admin.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="AdminHeader:: Header"></div>
+<br><br>	<br>	<br>	<br>
+<div class="container">
+
+<div class="card">
+	<div class="card-header ">
+		<p class="h4 mb-2 text-center titreCard">Organisation d'un vol</p>
+	</div>
+	<div class="card-body">
+		<form class="text-center border border-light p-5" method="post" th:action="@{/addVol}" enctype="multipart/form-data">
+
+			
+			<!-- Départ-->
+			<input type="text" name="VdepartB" id="VdepartB" class="form-control mb-4"
+				placeholder="Ville de départ">
+			<!-- destin-->
+			<input type="text" name="destinationB" id="destinationB" class="form-control mb-4"
+				placeholder="Destination">
+
+			<!-- Price -->
+			<input type="text" name="prixB" id="prixB" class="form-control mb-4"
+				placeholder="Prix">
+			<!-- Dates -->
+			<div class="row ">
+			<div class="col-2"><label>Date de départ</label></div>
+			
+			<div class="col-5"><input type="date" name="dateDB" id="dateDB" class="form-control mb-4"
+				placeholder="Date de départ"></div>
+			<div class="col-5"><input type="time" name="timeDB" id="timeDB" class="form-control mb-4"
+				placeholder="Horaire de départ"></div>
+			</div>
+			<div class="row">
+			<div class="col-2"><label>Date d'arrivée</label></div>
+			<div class="col-5"><input type="date" name="dateAB" id="dateAB" class="form-control mb-4"
+				placeholder="Date d'arrivée"></div>
+			<div class="col-5"><input type="time" name="timeAB" id="timeAB" class="form-control mb-4"
+				placeholder="Horaire d'arrivée"></div>
+			</div>
+			<!-- Compagnie -->
+			<input type="text" name="compagnie" id="compagnie" class="form-control mb-4"
+				placeholder="Compagnie aéerienne">
+			<button class="btn btn-info btn-block" type="submit">Valider</button>
+		</form>
+	</div>
+	</div>
+	
+</div>
+<!-- Default form subscription -->
+<!-- Bootstrap JS & jQuery -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>

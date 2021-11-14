@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Safely Travel</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/css/admin.css}" rel="stylesheet">
+
+</head>
+
+  
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-dark ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="/">Safely Travel</a></h1>
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/admin">Accueil</a></li>
+          
+         
+          <li class="drop-down"><a href="">Offres</a>
+            <ul>
+              
+              <li class="drop-down"><a href="#">Gestion des offres</a>
+                <ul>
+                    <a class="dropdown-item" th:href="@{/add}">Voyage organisés</a>
+          			<a class="dropdown-item" th:href="@{/AjoutOmra}">Omra</a>
+          			<a class="dropdown-item"  th:href="@{/AjoutHotel}">Hotêls</a>
+          			<a class="dropdown-item" th:href="@{/AjoutVol}">Vols</a>
+                </ul>
+              </li>
+               <li class="drop-down"><a href="#">offres disponnibles</a>
+                 <ul>
+                    <a class="dropdown-item" th:href="@{/listvoyage}">Voyage organisés</a>
+         			 <a class="dropdown-item" th:href="@{/listomra}">Omra</a>
+          			<a class="dropdown-item"  th:href="@{/listhotels}">Hotêls</a>
+          			<a class="dropdown-item" th:href="@{/listvol}">Vols</a>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li><a th:href="@{/avis}">Messagerie Client</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a th:href="@{/logout}" class="get-started-btn scrollto">Déconnexion</a>
+
+    </div>
+  </header><!-- End Header -->
+  </body>
+  </html>

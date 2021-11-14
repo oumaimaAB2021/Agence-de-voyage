@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<meta charset="utf-8">
+<title>Vols</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+
+  <link th:href="@{/css/admin.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="AdminHeader:: Header"></div>
+<br><br>	<br>	<br>	<br>
+<div class="container">
+		<div class="col-12">
+			
+			
+            <h3 class="text-center titreAdmin">liste des vols disponnibles</h3>
+			<hr>
+			 <table class="table table-dark" data-toggle="table" data-search="true" data-show-columns="true" data-pagination="true">
+
+				<thead class="thead-dark">
+					<tr>
+						
+						<th scope="col">Ville de départ</th>
+						<th scope="col">Ville d'arrivée</th>
+						<th scope="col">Compagnie</th>
+						<th scope="col">Date de départ</th>
+						<th scope="col">Heure de départ</th>
+						<th scope="col">Date d'arrivée</th>
+						<th scope="col">Heure d'arrivée</th>
+						<th> </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="billet :${billet}">
+					  <td>[[*{billet.VilleDepart}]] 
+						<!-- 	<button type="button" class="btn btn-success btn-sm mt-2"
+								data-toggle="modal"
+								th:attr="data-target='#exampleModalCenter'+*{voyage.numOffre}">change name</button> 
+						 -->
+						<!-- <div class="modal fade"
+								th:id="*{'exampleModalCenter'+{voyage.numOffre}}" tabindex="-1"
+								role="dialog" aria-labelledby="exampleModalCenterTitle"
+								aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalCenterTitle">change
+												product name</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<form action="/changeName" method="post">
+												<div class="form-group">
+													<label>product id</label> <input type="hidden"
+														th:value="*{voyage.numOffre}" class="form-control" name="id">
+													<label>new Product name</label> <input type="text"
+														name="newPname" class="form-control"> <br>
+													<button type="submit" class="btn btn-primary">submit</button>
+												</div>
+											</form>
+
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">Close</button>
+
+										</div>
+									</div>
+								</div>
+							</div>
+ -->
+						</td>
+						<td> <!-- Button trigger modal -->
+							[[*{billet.VilleArrive}]]
+							
+						</td>
+						<td> [[*{billet.compagnie}]]</td>
+						<td> [[*{billet.dateDepart}]]</td>
+						<td>[[*{billet.HeureDepart}]] </td>
+						<td>[[*{billet.dateArrivee}]] </td>
+						<td>[[*{billet.HeureArrivee}]]</td>
+						<td><a th:href="@{/SupprimerVol/{id}(id=${billet.numOffre})}"
+							onclick="return confirm('Voulez vous vraiment supprimer cet offre')" class="btn btn-danger mt-4">Supprimer</a></td>
+						
+					</tr>
+				
+				</tbody>
+		
+			</table>
+			<hr>
+		</div>
+</div>
+
+<!-- Bootstrap JS & jQuery -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Insérer cette balise "script" après celle de Bootstrap -->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<!-- langue -->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/locale/bootstrap-table-fr-FR.min.js"></script>
+</body>
+</html>

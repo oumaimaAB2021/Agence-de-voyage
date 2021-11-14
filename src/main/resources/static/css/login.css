@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Newsreader & display = swap');
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('bg_login.jpg');
+background-size: cover;
+/*opacity: 0.3;
+filter : alpha(opacity=35);*/
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+.container{
+height: 100%;
+align-content: center;
+opacity: 1 !important;
+/*filter :alpha(opacity=100) !important;*/
+}
+
+.card{
+height: 380px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.logo_login span{
+font-size: 60px;
+margin-left: 10px;
+color: white;
+}
+
+.logo_login span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+font-family: 'Newsreader', serif !important;
+font-weight: bold;
+}
+
+.logo_login{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+/*background-color: #FFC312;*/
+background-color: #005AA7;
+color: white;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn{
+color: white;
+font-weight: bold;
+background-color: #4FC1B7;
+
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}

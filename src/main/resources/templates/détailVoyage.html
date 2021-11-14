@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<title>Votre confort </title>
+
+	    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    
+    <!-- styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" th:href="@{/css/ServicesCss/Forms.css}" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+	
+        
+        <!-- Footer css -->
+        <link rel="stylesheet" th:href="@{/css/Footer.css}"/>
+        <link rel="stylesheet" th:href="@{/css/banner.css}"/>
+        <link rel="stylesheet" th:href="@{/css/Header.css}"/>
+        <link rel="stylesheet" th:href="@{/css/about.css}"/>
+         
+        <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <!--Owl carrosel-->
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}"/>
+        
+</head>
+<body>
+	<div th:replace="Header2:: Header"></div> 
+	
+<!--Main section-->
+    <main id="site-main">
+        <Section id="banner-about">
+            <div class="row m-0">
+                <div class="col-lg-7">
+                    <div class="space-about">
+                    
+                    </div>
+                </div>
+            </div>
+        </Section>
+        <!--Carossel section -->
+<div class="container p-4 mt-4">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="project-info-box mt-0 mb-2">
+                <h5 class="titreDesc">DESCRIPTION</h5>
+                <p class="mb-4">[[*{offreChoisi.descriptionVoyage}]]</p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box">
+                <p class="titreDesc1"><b>Ville Départ:</b> <input type="text" readonly th:value="${offreChoisi.villeDepart}" style="border:none"></p>
+                 <p class="titreDesc1"><b>Ville Arrivée:</b> <input type="text" readonly th:value="${offreChoisi.villeArrive}" style="border:none"></p>
+                <p class="titreDesc1"><b>Date Début:</b> <input type="text" readonly th:value="${offreChoisi.dateDebut}"name="prix"  style="border:none"></p>
+                <p class="titreDesc1"><b>Date Retour:</b> <input type="text" readonly th:value="${offreChoisi.dateExpedition}"name="prix"  style="border:none"></p>
+                <p class="titreDesc1" ><b>Prix :</b> <input type="text" readonly th:value="${offreChoisi.Prix}+DH"
+												name="prix"  style="border:none"></p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box mt-0 mb-0">
+                <p class=" titreDesc1 mb-2">
+                    <span class="fw-bold mr-10 va-middle hide-mobile">Consulter:</span>
+                    <a href="#x" class="btn btn-xs btn-facebook btn-circle btn-icon mr-5 mb-0"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#x" class="btn btn-xs btn-pinterest btn-circle btn-icon mr-5 mb-0"><i class="fab fa-instagram"></i></a>
+                    <a href="#x" class="btn btn-xs btn-linkedin btn-circle btn-icon mr-5 mb-0"><i class="fab fa-whatsapp"></i></a>
+                </p>
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+
+        <div class="col-md-7">
+            <img style="width:600px; height:470px;" th:src="*{'data:image/jpeg;base64,'+{offreChoisi.imageVoyage}}" 
+											 alt="project-image" class="rounded">
+            <div class="project-info-box">
+                <p class="titreDesc1"><b>Titre:</b> <input type="text" style="border:none"
+												readonly th:value="${offreChoisi.titreVoyage}"
+												 name="nomHotel" class="txt"></p>
+               
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+    </div>
+</div>
+	
+
+    			<!-- Formulaire -->
+    			<div class="row pb-2">
+    			 <div class="col-md-3 ">
+    			 </div>
+						    <div class="col-md-6 ">
+								<div class="form_main ">
+						                <h4 class="heading"><strong> Choisissez </strong> votre confort <span></span></h4>
+						                <div class="form">
+						                <form th:action="@{/détailVoyage}" method="post" id="contactFrm" name="contactFrm" th:object="${voyage}">
+						                    <label><strong>Nombre enfant</strong></label><input type="text" required placeholder="Nombre enfant" th:field="*{nbrEnfant}" name="nbr_enfant" class="txt">
+						                    <label><strong>Nombre adulte</strong></label><input type="text" required placeholder="Nombre adulte" th:field="*{nbrAdulte}" name="nbr_adulte" class="txt">
+						                	 
+						                     <input type="submit" value="submit" name="submit" class="txt2">
+						                </form>
+						            </div>
+						           </div>	
+						        </div>
+						        <div class="col-md-3 ">
+						        </div>
+						        </div>
+					<!-- End Formulaire -->
+					<div th:replace="Footer:: Footer"></div>
+	</main>
+</body>
+</html>
